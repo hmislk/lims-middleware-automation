@@ -28,6 +28,19 @@ public class ResultsRecord {
         this.instrumentName = instrumentName;
     }
 
+    public ResultsRecord(int frameNumber, String testCode, double resultValue, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName) {
+        this.frameNumber = frameNumber;
+        this.testCode = testCode;
+        this.resultValue = resultValue;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+    }
+
     
     
     
