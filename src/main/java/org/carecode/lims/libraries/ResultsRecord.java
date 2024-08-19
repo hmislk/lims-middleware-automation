@@ -1,6 +1,7 @@
 package org.carecode.lims.libraries;
 
 /**
+ * Represents a result record for laboratory information systems.
  *
  * @author buddh
  */
@@ -16,19 +17,21 @@ public class ResultsRecord {
     private String resultUnits;
     private String resultDateTime;
     private String instrumentName;
+    private String sampleId;  // New field to store the sample ID
 
     // Constructor
     public ResultsRecord(int frameNumber, String testCode, double resultValue, String resultUnits,
-            String resultDateTime, String instrumentName) {
+            String resultDateTime, String instrumentName, String sampleId) {
         this.frameNumber = frameNumber;
         this.testCode = testCode;
         this.resultValue = resultValue;
         this.resultUnits = resultUnits;
         this.resultDateTime = resultDateTime;
         this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
     }
 
-    public ResultsRecord(int frameNumber, String testCode, double resultValue, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName) {
+    public ResultsRecord(int frameNumber, String testCode, double resultValue, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId) {
         this.frameNumber = frameNumber;
         this.testCode = testCode;
         this.resultValue = resultValue;
@@ -39,11 +42,9 @@ public class ResultsRecord {
         this.resultUnits = resultUnits;
         this.resultDateTime = resultDateTime;
         this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
     }
 
-    
-    
-    
     // Getters and Setters
     public int getFrameNumber() {
         return frameNumber;
@@ -123,5 +124,13 @@ public class ResultsRecord {
 
     public void setSampleType(String sampleType) {
         this.sampleType = sampleType;
+    }
+
+    public String getSampleId() {
+        return sampleId;
+    }
+
+    public void setSampleId(String sampleId) {
+        this.sampleId = sampleId;
     }
 }
