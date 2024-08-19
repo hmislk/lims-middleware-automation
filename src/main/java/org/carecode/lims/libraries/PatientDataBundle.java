@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.carecode.lims.libraries;
 
 /**
  *
- * @author buddh
+ * @author Dr M H Buddhika Ariyaratne, Consultant in Health Informatics,
+ * buddhika.ari@gmail.com
+ *
  */
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +15,7 @@ public class PatientDataBundle {
     private List<ResultsRecord> resultsRecords;
     private List<OrderRecord> orderRecords;
     private List<QueryRecord> queryRecords;
+    private AnalyzerDetails analyzerDetails;
 
     // Constructor
     public PatientDataBundle() {
@@ -60,4 +59,13 @@ public class PatientDataBundle {
     public List<QueryRecord> getQueryRecords() {
         return queryRecords;
     }
+    
+    public AnalyzerDetails getAnalyzerDetails() {
+        return analyzerDetails;
+    }
+
+    public void setAnalyzerDetails(AnalyzerDetails analyzerDetails) {
+        this.analyzerDetails = analyzerDetails;
+    }
+
 }
