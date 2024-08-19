@@ -3,7 +3,7 @@ package org.carecode.lims.libraries;
 /**
  *
  * @author M H B Ariyaratne, buddhika.ari@gmail.com
- * 
+ *
  */
 public class AnalyzerDetails {
 
@@ -12,6 +12,8 @@ public class AnalyzerDetails {
     private String analyzerId;
     private String analyzerIP;
     private int analyzerPort;
+    private String hostIP;
+    private int hostPort;
     private String communicationType;
     private String socketCommunicationType;
     private String resultSendingCriteria;
@@ -152,7 +154,23 @@ public class AnalyzerDetails {
         this.departmentId = departmentId;
     }
 
+    public String getHostIP() {
+        return hostIP;
+    }
+
+    public void setHostIP(String hostIP) {
+        this.hostIP = hostIP;
+    }
+
+    public int getHostPort() {
+        return hostPort;
+    }
+
+    public void setHostPort(int hostPort) {
+        this.hostPort = hostPort;
+    }
     
     
     
+
 }
