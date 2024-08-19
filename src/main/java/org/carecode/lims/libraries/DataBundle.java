@@ -9,18 +9,18 @@ package org.carecode.lims.libraries;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PatientDataBundle {
+public class DataBundle {
 
     private PatientRecord patientRecord;
-    private List<ResultsRecord> resultsRecords;
-    private List<OrderRecord> orderRecords;
-    private List<QueryRecord> queryRecords;
+    private MiddlewareSettings middlewareSettings;
+    private final List<ResultsRecord> resultsRecords;
+    private final List<OrderRecord> orderRecords;
+    private final List<QueryRecord> queryRecords;
     @Deprecated
     private AnalyzerDetails analyzerDetails;
-    private MiddlewareSettings middlewareSettings;
 
     // Constructor
-    public PatientDataBundle() {
+    public DataBundle() {
         this.resultsRecords = new ArrayList<>();
         this.orderRecords = new ArrayList<>();
         this.queryRecords = new ArrayList<>();
@@ -61,7 +61,7 @@ public class PatientDataBundle {
     public List<QueryRecord> getQueryRecords() {
         return queryRecords;
     }
-    
+
     public AnalyzerDetails getAnalyzerDetails() {
         return analyzerDetails;
     }
@@ -78,6 +78,4 @@ public class PatientDataBundle {
         this.middlewareSettings = middlewareSettings;
     }
 
-    
-    
 }
