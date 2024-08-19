@@ -6,7 +6,12 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Represents an order record for laboratory information systems following ASTM standards.
+ * 
+ * Represents an order record for laboratory information systems
+ * Author :     Dr M H B Ariyaratne, MBBS, MSc(Biomedical Informatics), MD(Health Informatics) & ChatGPT
+ *              Consultant in Health Informatics
+ *              buddhika.ari@gmail.com
+ * 
  */
 public class OrderRecord {
     private int frameNumber;
