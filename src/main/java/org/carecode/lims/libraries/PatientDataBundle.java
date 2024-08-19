@@ -15,7 +15,9 @@ public class PatientDataBundle {
     private List<ResultsRecord> resultsRecords;
     private List<OrderRecord> orderRecords;
     private List<QueryRecord> queryRecords;
+    @Deprecated
     private AnalyzerDetails analyzerDetails;
+    MiddlewareSettings middlewareSettings;
 
     // Constructor
     public PatientDataBundle() {
@@ -35,7 +37,7 @@ public class PatientDataBundle {
 
     // Add and retrieve methods for ResultsRecord
     public void addResultsRecord(ResultsRecord record) {
-        this.resultsRecords.add(record);
+        this.getResultsRecords().add(record);
     }
 
     public List<ResultsRecord> getResultsRecords() {
