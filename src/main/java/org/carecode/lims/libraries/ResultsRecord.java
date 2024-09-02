@@ -10,6 +10,8 @@ public class ResultsRecord {
     private int frameNumber;
     private String testCode;
     private double resultValue;
+    private String resultValueString;
+    
     private double minimumValue;
     private double maximumValue;
     private String flag;
@@ -63,7 +65,86 @@ public class ResultsRecord {
         this.comments = comments;
     }
 
+    // Constructor
+    public ResultsRecord(int frameNumber, String testCode, String resultValueString, String resultUnits,
+            String resultDateTime, String instrumentName, String sampleId) {
+        this.frameNumber = frameNumber;
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
+    }
+
+    public ResultsRecord(int frameNumber, String testCode, String resultValueString, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId) {
+        this.frameNumber = frameNumber;
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
+    }
+
+    public ResultsRecord(int frameNumber, String testCode, String resultValueString, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId, String status, String comments) {
+        this.frameNumber = frameNumber;
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;
+        this.status = status;
+        this.comments = comments;
+    }
     
+     // Constructor
+    public ResultsRecord( String testCode, String resultValueString, String resultUnits,
+            String resultDateTime, String instrumentName, String sampleId) {
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
+    }
+
+    public ResultsRecord(String testCode, String resultValueString, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId) {
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;  // Initialize the sample ID
+    }
+
+    public ResultsRecord(String testCode, String resultValueString, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId, String status, String comments) {
+        this.testCode = testCode;
+        this.resultValueString = resultValueString;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;
+        this.status = status;
+        this.comments = comments;
+    }
     
     // Getters and Setters
     public int getFrameNumber() {
@@ -169,6 +250,16 @@ public class ResultsRecord {
     public void setComments(String comments) {
         this.comments = comments;
     }
+
+    public String getResultValueString() {
+        return resultValueString;
+    }
+
+    public void setResultValueString(String resultValueString) {
+        this.resultValueString = resultValueString;
+    }
+
+ 
     
     
 }
