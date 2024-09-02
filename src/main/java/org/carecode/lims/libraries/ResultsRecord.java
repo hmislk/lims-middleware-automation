@@ -17,7 +17,9 @@ public class ResultsRecord {
     private String resultUnits;
     private String resultDateTime;
     private String instrumentName;
-    private String sampleId;  // New field to store the sample ID
+    private String sampleId;
+    private String status;
+    private String comments;
 
     // Constructor
     public ResultsRecord(int frameNumber, String testCode, double resultValue, String resultUnits,
@@ -45,6 +47,24 @@ public class ResultsRecord {
         this.sampleId = sampleId;  // Initialize the sample ID
     }
 
+    public ResultsRecord(int frameNumber, String testCode, double resultValue, double minimumValue, double maximumValue, String flag, String sampleType, String resultUnits, String resultDateTime, String instrumentName, String sampleId, String status, String comments) {
+        this.frameNumber = frameNumber;
+        this.testCode = testCode;
+        this.resultValue = resultValue;
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
+        this.flag = flag;
+        this.sampleType = sampleType;
+        this.resultUnits = resultUnits;
+        this.resultDateTime = resultDateTime;
+        this.instrumentName = instrumentName;
+        this.sampleId = sampleId;
+        this.status = status;
+        this.comments = comments;
+    }
+
+    
+    
     // Getters and Setters
     public int getFrameNumber() {
         return frameNumber;
@@ -133,4 +153,22 @@ public class ResultsRecord {
     public void setSampleId(String sampleId) {
         this.sampleId = sampleId;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+    
+    
 }
